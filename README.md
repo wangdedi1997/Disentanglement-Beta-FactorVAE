@@ -1,5 +1,6 @@
-# Disentanglement-Beta-FactorVAE
 
+
+# Disentanglement-Beta-FactorVAE
 
 This work is done by Dedi Wang during the first rotation (2019.09-2019.11) in Prof. Pratyush Tiwary's lab. The goal of this project is to test the performance of VAE-based disentanglement algorithms on two toy models.
 
@@ -20,6 +21,7 @@ $x_7'=(x_1-x_2)/\sqrt{2}+\epsilon$
 $x_1'=-(x_1-x_2)/\sqrt{2}+\epsilon$
 
 ### Algorithm
-Based on the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), our target of object function is 
+In this project, I studied the performance of FactorVAE, proposed in the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), on the two toy models. A small revision is made in the object function: a hyper-parameter $\beta$ is added to change the bottleneck capacity. Thus, our object fuction is 
 $L=-\frac{1}{N}\sum\limits_{i=1}^{N}\left[E_{q(z|x^i)}[logp(x^i|z)]+\beta KL(q(z|x^i)||p(z))\right]+\gamma KL(q(z)||\bar{q}(z))$
 
+Here, the total correlation of latent variables is also estimated using the density ratio trick as FactorVAE did. 
