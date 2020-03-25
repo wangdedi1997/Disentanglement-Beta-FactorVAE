@@ -7,19 +7,19 @@ This work is done by Dedi Wang during the first rotation (2019.09-2019.11) in Pr
 ### Toy Model
 In my first model, x1 and x2 are produced from two independent Gaussian distribution, where the mean is zero and the variance is 1. Then I entangled them to produce a 2-dimensional entangled dataset. Of course, we also add a noise to simulate the real situation.   
 
-<img src="https://render.githubusercontent.com/render/math?math=x_1'=x_1+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_2'=(x_1+x_2)/\sqrt{2}+\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_1'=x_1%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_2'=(x_1%2Bx_2)/\sqrt{2}%2B\epsilon">
 
 And my second toy model is similar, but instead of outputting a 2-dimensional entangled dataset, now we output an 8-dimensional entangled dataset. 
 
-<img src="https://render.githubusercontent.com/render/math?math=x_1'=(x_1+2x_2)/\sqrt{5}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_2'=(x_1-2x_2)/\sqrt{5}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_3'=(2x_1+x_2)/\sqrt{5}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_4'=(2x_1-2x_2)/\sqrt{5}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_5'=(x_1+x_2)/\sqrt{2}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_6'=-(x_1+x_2)/\sqrt{2}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_7'=(x_1-x_2)/\sqrt{2}+\epsilon">
-<img src="https://render.githubusercontent.com/render/math?math=x_8'=-(x_1-x_2)/\sqrt{2}+\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_1'=(x_1%2B2x_2)/\sqrt{5}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_2'=(x_1-2x_2)/\sqrt{5}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_3'=(2x_1%2Bx_2)/\sqrt{5}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_4'=(2x_1-2x_2)/\sqrt{5}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_5'=(x_1%2Bx_2)/\sqrt{2}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_6'=-(x_1%2Bx_2)/\sqrt{2}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_7'=(x_1-x_2)/\sqrt{2}%2B\epsilon">
+<img src="https://render.githubusercontent.com/render/math?math=x_8'=-(x_1-x_2)/\sqrt{2}%2B\epsilon">
 
 ### Algorithm
 In this project, I studied the performance of FactorVAE, proposed in the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), on the two toy models. A small revision is made in the object function: a hyper-parameter beta is added to change the bottleneck capacity. Thus, our object fuction is 
