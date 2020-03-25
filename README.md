@@ -24,6 +24,6 @@ And my second toy model is similar, but instead of outputting a 2-dimensional en
 ### Algorithm
 In this project, I studied the performance of FactorVAE, proposed in the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), on the two toy models. A small revision is made in the object function: a hyper-parameter $\beta$ is added to change the bottleneck capacity. Thus, our object fuction is 
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=L%3D-%5Cfrac%7B1%7D%7BN%7D%5Csum%5Climits_%7Bi%3D1%7D%5E%7BN%7D%5Cleft%5BE_%7Bq%28z%7Cx%5Ei%29%7D%5B%5Clog%20p%28x%5Ei%7Cz%29%5D%2B%5Cbeta%20KL%28q%28z%7Cx%5Ei%29%7C%7Cp%28z%29%29%5Cright%5D%2B%5Cgamma%20KL%28q%28z%29%7C%7C%5Cbar%7Bq%7D%28z%29%29&bc=White&fc=Black&im=jpg&fs=12&ff=mathptmx&edit=0" align="center" border="0" alt="L=-\frac{1}{N}\sum\limits_{i=1}^{N}\left[E_{q(z|x^i)}[\log p(x^i|z)]+\beta KL(q(z|x^i)||p(z))\right]+\gamma KL(q(z)||\bar{q}(z))" width="489" height="46" />
+<img src="http://latex.codecogs.com/gif.latex?L%3D-%5Cfrac%7B1%7D%7BN%7D%5Csum%5Climits_%7Bi%3D1%7D%5E%7BN%7D%5Cleft%5BE_%7Bq%28z%7Cx%5Ei%29%7D%5B%5Clog%20p%28x%5Ei%7Cz%29%5D&plus;%5Cbeta%20KL%28q%28z%7Cx%5Ei%29%7C%7Cp%28z%29%29%5Cright%5D&plus;%5Cgamma%20KL%28q%28z%29%7C%7C%5Cbar%7Bq%7D%28z%29%29">
 
 Here, the total correlation of latent variables is also estimated using the density ratio trick as FactorVAE did. 
