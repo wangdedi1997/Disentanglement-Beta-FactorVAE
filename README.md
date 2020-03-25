@@ -22,7 +22,7 @@ And my second toy model is similar, but instead of outputting a 2-dimensional en
 <img src="https://render.githubusercontent.com/render/math?math=x_8'=-(x_1-x_2)/\sqrt{2}+\epsilon">
 
 ### Algorithm
-In this project, I studied the performance of FactorVAE, proposed in the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), on the two toy models. A small revision is made in the object function: a hyper-parameter $\beta$ is added to change the bottleneck capacity. Thus, our object fuction is 
+In this project, I studied the performance of FactorVAE, proposed in the paper Disentangling by Factorising (Kim & Mnih, 2018) [https://arxiv.org/pdf/1802.05983.pdf](https://arxiv.org/pdf/1802.05983.pdf), on the two toy models. A small revision is made in the object function: a hyper-parameter beta is added to change the bottleneck capacity. Thus, our object fuction is 
 
 <img src="http://latex.codecogs.com/gif.latex?L%3D-%5Cfrac%7B1%7D%7BN%7D%5Csum%5Climits_%7Bi%3D1%7D%5E%7BN%7D%5Cleft%5BE_%7Bq%28z%7Cx%5Ei%29%7D%5B%5Clog%20p%28x%5Ei%7Cz%29%5D&plus;%5Cbeta%20KL%28q%28z%7Cx%5Ei%29%7C%7Cp%28z%29%29%5Cright%5D&plus;%5Cgamma%20KL%28q%28z%29%7C%7C%5Cbar%7Bq%7D%28z%29%29">
 
